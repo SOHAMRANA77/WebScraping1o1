@@ -124,6 +124,7 @@ Log_progress("Process Complete")
 # Close SQLite3 connection
 SqlConnection.close()
 Log_progress("Server Connection closed")
-
+print(Extract(URL, Table_Attributes).to_string(index=True))
+print(Transform(DF, Exch_Rate).to_string(index=True))
 # Convert DataFrame to a string and print
 # print(Transform(DF, Exch_Rate).to_string(index=False))
